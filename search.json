@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html#what-the-paper-does",
+    "href": "index.html#what-the-paper-does",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "What the Paper Does",
+    "text": "What the Paper Does\n\nData: 5,809 low-income tenancies; full monthly payment histories + eviction filings (1,814 used in estimation)\nFact 1: 50% of tenants default at some point; landlords collect only 91% of rent due\nFact 2: Landlords wait 2–3 months before filing — option value from learning\nFact 3: 39% of first-time defaulters eventually fully repay\nModel: Bayesian landlord, Markov tenant types, \\(C_e \\approx \\$2{,}000\\)\nPolicy: tax / delay / SRA all cut evictions 5%; differ sharply in cost and targeting"
+  },
+  {
+    "objectID": "index.html#the-model-in-one-analogy",
+    "href": "index.html#the-model-in-one-analogy",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "The Model in One Analogy",
+    "text": "The Model in One Analogy\nLike Rust (1987), but the bus changes type each period\n\nRust: Harold Zurcher decides each month whether to replace a bus engine\n\nReplace → reset; keep → risk of breakdown governed by engine mileage\n\nHere: landlord decides whether to evict a tenant\n\nEvict → vacancy, new tenant draw; keep → rent income governed by tenant type \\(\\omega_t\\)\n\nKey difference: in Rust, the bus type is fixed — only mileage accumulates\n\nHere, \\(\\omega_t \\sim F(\\cdot \\mid \\omega_{t-1})\\): the tenant’s type itself drifts each period\nToday’s reliable payer may not be tomorrow’s"
+  },
+  {
+    "objectID": "index.html#comment-1-what-is-a-type",
+    "href": "index.html#comment-1-what-is-a-type",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "Comment 1: What is a “Type”?",
+    "text": "Comment 1: What is a “Type”?\n\\(\\omega_t\\) conflates two distinct things\n\nTrue type: innate payment ethics, personal pain threshold, financial discipline\nTransitory shock: job loss, illness, family crisis (Li, Meghir, and Oswald 2025)\n\n\nPolicy implication flips depending on which predominates\n\nShock-driven: SRA timed to the shock is nearly first-best\nType-driven: SRA is largely wasted on persistent non-payers\n\n\n\nA third channel: peer effects\n\nCampaniello and Macaluso (2026): +10pp neighbor delinquency → +3pp own delinquency in Turin public housing"
+  },
+  {
+    "objectID": "index.html#comment-2-the-epsilon-shock",
+    "href": "index.html#comment-2-the-epsilon-shock",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "Comment 2: The \\(\\epsilon\\) Shock",
+    "text": "Comment 2: The \\(\\epsilon\\) Shock\nEq. (8) looks like \\(\\sigma_\\epsilon \\equiv 1\\) — but Table 4 estimates it\n\\[P(e=1 \\mid \\pi, b) = \\frac{1}{1 + \\exp(\\bar{v}^{e=0} - \\bar{v}^{e=1})}\\]\n\nRust normalizes \\(\\sigma_\\epsilon = 1\\): no dollar scale in flow utility\nHere \\(R \\cdot y_t\\) is in observed dollars → \\(\\sigma_\\epsilon\\) is separately identified\nTable 4: \\(\\hat\\sigma_\\epsilon = \\$581\\), i.e. 29% of \\(\\hat{C}_e\\)\nIdentified from steepness of \\(P(e=1)\\) across \\((\\pi, b)\\) states\n\n\nRisk: \\(\\Delta\\bar{v}(\\pi,b)\\) is computed, not observed → misspecification loads onto \\(\\sigma_\\epsilon\\)"
+  },
+  {
+    "objectID": "index.html#two-discussion-points",
+    "href": "index.html#two-discussion-points",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "Two Discussion Points",
+    "text": "Two Discussion Points\n\nTax beats Delay — the mechanism challenges the case for right-to-counsel\nThe 5% result — entirely driven by estimated type persistence; how credible?"
+  },
+  {
+    "objectID": "index.html#d1-tax-beats-delay",
+    "href": "index.html#d1-tax-beats-delay",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "D1: Tax Beats Delay",
+    "text": "D1: Tax Beats Delay\n\nTax: raises up-front cost → deters marginal evictions → saves recoverable tenants\nDelay: extends post-filing stay → raises threshold for filing on Type L → defers, not prevents, those evictions\n\n\n\n\n\n\nType H saved\nType M saved\nType L saved\nNet cost\n\n\n\n\nTax\n30%\n19%\n10%\n$0.91/mo\n\n\nDelay\n6%\n9%\n12%\n$8.20/mo\n\n\n\n\n\nQ: Delay is modeled only as \\(\\delta_e\\) (slower exit). Right-to-counsel also reduces possession judgments and enables repayment negotiations — does the model understate its benefits?\nSame issue for SRA: eligible only before filing; landlord can evict after receipt → forbearance effect, not protection effect"
+  },
+  {
+    "objectID": "index.html#d2-250-tax-reduces-evictions-by-5",
+    "href": "index.html#d2-250-tax-reduces-evictions-by-5",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "D2: 250$ Tax reduces evictions by 5%",
+    "text": "D2: 250$ Tax reduces evictions by 5%\nDriven by high persistence: \\(L \\to L = 96.4\\%\\)\n\nHigh \\(C_e\\): landlords wait → accumulate information → few marginal evictions\nHigh persistence: once Type L, almost certainly stays Type L\nTable 6: less persistent types → same tax reduces evictions 6× more\n\n\nHow is persistence identified?\n\nPayment histories of non-evicted tenants only (evicted tenants are censored)\nConditional independence: eviction uncorrelated with future payments given \\(h_t\\)\nFull-information model needs \\(C_e = \\$3{,}550\\) to fit the same data"
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "Summary",
+    "text": "Summary\n\nFirst paper to link payment histories to eviction decisions — opens a new empirical agenda\nTax beats delay: a clear, policy-relevant ranking of instruments with a precise mechanism\nOpen question: how much of the 5% reduction in evictions is a feature of this market vs. the model’s type persistence structure?\nNatural next step: 15% of evictions are preventable — can we identify and target those tenants ex ante?"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Discussing: Nonpayment and Eviction in the Rental Housing Market",
+    "section": "References",
+    "text": "References\n\n\n\n\nCampaniello, Nadia, and Mariele Macaluso. 2026. “Peer Effects in Tenant Delinquency: Evidence from a Quasi-Natural Experiment in Public Housing.”\n\n\nLi, Wenli, Costas Meghir, and Florian Oswald. 2025. “Consumer Bankruptcy, Mortgage Default, and Labor Supply.” International Economic Review 66 (3): 1019–42.\n\n\nRust, John. 1987. “Optimal Replacement of GMC Bus Engines: An Empirical Model of Harold Zurcher.” Econometrica: Journal of the Econometric Society, 999–1033."
+  }
+]
