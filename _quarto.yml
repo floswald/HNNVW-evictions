@@ -1,3 +1,8 @@
 project:
-  title: "CEPR: Discussion HNNVW"
+  type: website
+  render:
+    - index.qmd
+    - notes/notes.qmd
 
+website:
+  title: "CEPR: Discussion HNNVW"

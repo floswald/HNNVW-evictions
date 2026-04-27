@@ -38,9 +38,7 @@ bibliography: refs.bib
 :::
 
 
-## Comment 1: What is a "Type"?
-
-### $\omega_t$ conflates two distinct things
+## Comment 1: What is a "Type", $\omega_t$?
 
 ::: {.incremental}
 - **True type:** innate payment ethics, personal pain threshold, financial discipline
@@ -56,7 +54,6 @@ bibliography: refs.bib
 
 ::: {.fragment}
 **A third channel: peer effects**
-
 - @campaniello2026: +10pp neighbor delinquency → +3pp own delinquency in Turin public housing
 :::
 
@@ -82,7 +79,7 @@ $$P(e=1 \mid \pi, b) = \frac{1}{1 + \exp(\bar{v}^{e=0} - \bar{v}^{e=1})}$$
 
 ::: {.incremental}
 1. **Tax beats Delay** — the mechanism challenges the case for right-to-counsel
-2. **The 5% result** — entirely driven by estimated type persistence; how credible?
+2. **The 5% reduction in evictions result** — entirely driven by estimated type persistence; how credible?
 :::
 
 ## D1: Tax Beats Delay
@@ -95,8 +92,8 @@ $$P(e=1 \mid \pi, b) = \frac{1}{1 + \exp(\bar{v}^{e=0} - \bar{v}^{e=1})}$$
 ::: {.fragment}
 | | Type H saved | Type M saved | Type L saved | Net cost |
 |---|---|---|---|---|
-| Tax | **30%** | 19% | 10% | \$0.91/mo |
-| Delay | 6% | 9% | **12%** | \$8.20/mo |
+| Tax | *30%* | 19% | 10% | \$0.91/mo |
+| Delay | 6% | 9% | *12%* | \$8.20/mo |
 :::
 
 ::: {.fragment}
