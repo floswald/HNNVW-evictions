@@ -1,0 +1,9 @@
+HNNVW-evictions_files/*
+notes_files/*
+
+/.quarto/
+*.html
+HNNVW-evictions.html
+/_site/
+
+**/*.quarto_ipynb

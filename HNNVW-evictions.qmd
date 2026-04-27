@@ -1,0 +1,137 @@
+---
+title: "Discussing: *Nonpayment and Eviction in the Rental Housing Market*"
+subtitle: "Authors: Humphries, Nelson, Nguyen, van Dijk & Waldinger"
+format: clean-revealjs
+author:
+  - name: Florian Oswald
+    orcid: 0000-0001-7737-2038
+    email: florian.oswald@unito.it
+    affiliations: Uni Turin (ESOMAS), Collegio Carlo Alberto
+date: last-modified
+highlight-style: pygments
+bibliography: refs.bib
+---
+
+## What the Paper Does
+
+::: {.incremental}
+- **Data:** 5,809 low-income tenancies; full monthly payment histories + eviction filings (1,814 used in estimation)
+- **Fact 1:** 50% of tenants default at some point; landlords collect only 91% of rent due
+- **Fact 2:** Landlords wait 2–3 months before filing — option value from learning
+- **Fact 3:** 39% of first-time defaulters eventually fully repay
+- **Model:** Bayesian landlord, Markov tenant types, $C_e \approx \$2{,}000$
+- **Policy:** tax / delay / SRA all cut evictions 5%; differ sharply in cost and targeting
+:::
+
+## The Model in One Analogy
+
+### Like @rust1987optimal, but the bus changes type each period
+
+::: {.incremental}
+- **Rust:** Harold Zurcher decides each month whether to replace a bus engine
+  - Replace → reset; keep → risk of breakdown governed by engine mileage
+- **Here:** landlord decides whether to evict a tenant
+  - Evict → vacancy, new tenant draw; keep → rent income governed by tenant type $\omega_t$
+- **Key difference:** in Rust, the bus *type* is fixed — only mileage accumulates
+  - Here, $\omega_t \sim F(\cdot \mid \omega_{t-1})$: the tenant's type itself drifts each period
+  - Today's reliable payer may not be tomorrow's
+:::
+
+
+## Comment 1: What is a "Type"?
+
+### $\omega_t$ conflates two distinct things
+
+::: {.incremental}
+- **True type:** innate payment ethics, personal pain threshold, financial discipline
+- **Transitory shock:** job loss, illness, family crisis [@li2025consumer]
+:::
+
+::: {.fragment}
+**Policy implication flips depending on which predominates**
+
+- Shock-driven: [SRA timed to the shock is nearly first-best]{.alert}
+- Type-driven: SRA is largely wasted on persistent non-payers
+:::
+
+::: {.fragment}
+**A third channel: peer effects**
+
+- @campaniello2026: +10pp neighbor delinquency → +3pp own delinquency in Turin public housing
+:::
+
+
+## Comment 2: The $\epsilon$ Shock
+
+### Eq. (8) looks like $\sigma_\epsilon \equiv 1$ — but Table 4 estimates it
+
+$$P(e=1 \mid \pi, b) = \frac{1}{1 + \exp(\bar{v}^{e=0} - \bar{v}^{e=1})}$$
+
+::: {.incremental}
+- Rust normalizes $\sigma_\epsilon = 1$: no dollar scale in flow utility
+- Here $R \cdot y_t$ is in observed dollars → $\sigma_\epsilon$ is separately identified
+- Table 4: $\hat\sigma_\epsilon = \$581$, i.e. 29% of $\hat{C}_e$
+- Identified from steepness of $P(e=1)$ across $(\pi, b)$ states
+:::
+
+::: {.fragment}
+**Risk:** $\Delta\bar{v}(\pi,b)$ is computed, not observed → [misspecification loads onto $\sigma_\epsilon$]{.alert}
+:::
+
+## Two Discussion Points
+
+::: {.incremental}
+1. **Tax beats Delay** — the mechanism challenges the case for right-to-counsel
+2. **The 5% result** — entirely driven by estimated type persistence; how credible?
+:::
+
+## D1: Tax Beats Delay
+
+::: {.incremental}
+- **Tax:** raises up-front cost → deters marginal evictions → [saves recoverable tenants]{.alert}
+- **Delay:** extends post-filing stay → raises threshold for filing on Type L → [defers, not prevents, those evictions]{.alert}
+:::
+
+::: {.fragment}
+| | Type H saved | Type M saved | Type L saved | Net cost |
+|---|---|---|---|---|
+| Tax | **30%** | 19% | 10% | \$0.91/mo |
+| Delay | 6% | 9% | **12%** | \$8.20/mo |
+:::
+
+::: {.fragment}
+**Q:** Delay is modeled only as $\delta_e$ (slower exit). Right-to-counsel also reduces possession judgments and enables repayment negotiations — does the model understate its benefits?
+
+*Same issue for SRA:* eligible only before filing; landlord can evict after receipt → forbearance effect, not protection effect
+:::
+
+## D2: 250$ Tax reduces evictions by 5%
+
+### Driven by high persistence: $L \to L = 96.4\%$
+
+::: {.incremental}
+- High $C_e$: landlords wait → accumulate information → few marginal evictions
+- High persistence: once Type L, almost certainly stays Type L
+- Table 6: less persistent types → same tax reduces evictions **6× more**
+:::
+
+::: {.fragment}
+**How is persistence identified?**
+
+- Payment histories of *non-evicted* tenants only (evicted tenants are censored)
+- Conditional independence: eviction uncorrelated with future payments given $h_t$
+- Full-information model needs $C_e = \$3{,}550$ to fit the same data
+:::
+
+
+## Summary
+
+::: {.incremental}
+- **First paper** to link payment histories to eviction decisions — opens a new empirical agenda
+- **Tax beats delay:** a clear, policy-relevant ranking of instruments with a precise mechanism
+- **Open question:** how much of the 5% reduction in evictions is a feature of *this* market vs. the model's type persistence structure?
+- **Natural next step:** 15% of evictions are preventable — can we identify and target those tenants *ex ante*?
+:::
+
+
+## References
